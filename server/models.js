@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 mongoose.Promise = Promise
-mongoose.connect(mongo, {useMongoClient: true})
+mongoose.connect('mongodb://Winter:test@ds237967.mlab.com:37967/lunchmoney', {useMongoClient: true})
 
 const SchoolSchema = new Schema({
   address: String,

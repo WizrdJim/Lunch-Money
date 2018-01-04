@@ -1,11 +1,17 @@
 const express = require('express');
 const path = require('path');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+app
+  .use(bodyParser.urlencoded({extended: false }))
+  .use(bodyParser.json())
+  .use(express.static(path.resolve(__dirname, '../react-ui/build')))
+  .use('/API', routes)
+
 
 // Answer API requests.
 app.get('/api', function (req, res) {
