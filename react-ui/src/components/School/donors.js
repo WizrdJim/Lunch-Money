@@ -6,6 +6,7 @@ import {
   Link,
   Route 
 } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
   class Donors extends Component {
@@ -18,8 +19,8 @@ import {
     donations: "",
     message: ""
   }
-
 }
+
 componentDidMount();
 
 getImage = (search_term) => {
@@ -34,10 +35,12 @@ getImage = (search_term) => {
     );
   });
 }
+
+handle
     render() {
       return(
         <div>
-          <div>
+          <div className="donors--container">
           <img src={user.thumbnailUrl}/>
           <p>{history.name}</p>
           <p>{history.donation}</p>
@@ -47,8 +50,5 @@ getImage = (search_term) => {
       );
     };
 }
-
-connect(mapStateToProps, somethingelse )(theFileName)
-
 
 export default Thumbnail;

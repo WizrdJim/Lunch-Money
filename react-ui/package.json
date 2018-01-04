@@ -8,10 +8,12 @@
   "dependencies": {
     "axios": "^0.17.1",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.32.0",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "require": "^2.4.20"
   },
   "scripts": {
     "start": "react-scripts start",

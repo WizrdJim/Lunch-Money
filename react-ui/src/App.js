@@ -52,7 +52,6 @@ class App extends Component {
             ? 'Fetching message from API'
             : this.state.message}
         </p>
-        <Dummy text='some random string'/>
       </div>
     );
   }
