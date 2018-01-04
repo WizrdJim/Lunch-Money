@@ -49,8 +49,8 @@ const DonationSchema = new Schema({
 })
 SchoolSchema.index({location: '2dsphere'});
 
-School = mongoose.model("Property", SchoolSchema)
-Donation = mongoose.model("OpenHouse", DonationSchema)
+School = mongoose.model("School", SchoolSchema)
+Donation = mongoose.model("Donation", DonationSchema)
 User = mongoose.model("User", UserSchema)
 
 module.exports = {
