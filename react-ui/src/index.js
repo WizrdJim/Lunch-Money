@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reducers from './reducers';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
