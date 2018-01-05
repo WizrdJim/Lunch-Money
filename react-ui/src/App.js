@@ -70,7 +70,7 @@ class App extends Component {
           <Button onClick={()=> this.setState({login: !this.state.login})}>{this.state.login ? "Don't an account" : 'Login'}</Button>
         </div>
         <div>
-
+          <ProgressBarInstance />
         </div>
         <div>
           <ProgressBarInstance />
