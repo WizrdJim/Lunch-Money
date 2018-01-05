@@ -3,6 +3,11 @@ import logo from './logo.svg';
 // import img from './LunchMoney_logo.png';
 import './App.css';
 import Login from './containers/Login';
+import DonorPage from './components/Donors';
+import PaymentPage from './components/Payments';
+import SchoolPage from './components/School';
+import { Route } from 'react-router-dom';
+
 
 import ProgressBarInstance from './components/School/progress_bar';
 // import Thumbnail from './components/School/thumbnail';
@@ -22,7 +27,10 @@ class App extends Component {
   render() {
     return(
       <div>
-        <HomePage />
+        <Route path="/" component={ HomePage } />
+        <Route path="/donor" component={DonorPage} />
+        <Route path="/school" component={SchoolPage} />
+        <Route path="/payment" component={PaymentPage} />
       </div>
     )
   }

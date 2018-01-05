@@ -46,15 +46,6 @@ router.post('/login', (req, res) => {
     return;
   }
   User.findOne({username})
-    .populate({
-      path: 'donation',
-      // Get friends of friends - populate the 'friends' array for every friend
-      populate: { 
-        path: 'donation',
-        model: 'Donation'
-      }
-    })
-    })
     .exec((error, user)=> {
       if (error) {
         console.log(error);
@@ -64,7 +55,24 @@ router.post('/login', (req, res) => {
       console.log({user})
       user.password === password ? res.send(user) : res.send({err: 'Please use correct credentials'})
     })
+})
 
+router.post('/schoollogin', (req, res) => {
+  const { username, password } = req.body
+  if (password === "") {
+    sendUserError("Please input a valid password", res);
+    return;
+  }
+  School.findOne({username})
+    .exec((error, user)=> {
+      if (error) {
+        console.log(error);
+        res.status(422)
+        return
+      }
+      console.log({user})
+      user.password === password ? res.send(user) : res.send({err: 'Please use correct credentials'})
+    })
 })
 
 module.exports = router;

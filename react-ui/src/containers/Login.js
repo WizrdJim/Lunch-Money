@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {Button} from "react-bootstrap";
-class Login extends Component {
+import { connect } from "react-redux";
+
+class SmartLogin extends Component {
   constructor() {
     super();
     this.state ={
@@ -52,5 +54,13 @@ class Login extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return{
 
-export default Login;
+  }
+}
+const mapDispatchToProps = {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SmartLogin);
