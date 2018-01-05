@@ -27,4 +27,6 @@ body {
 
 .navbar {
   background-color: white;
+  position: fixed;
+  width: 100%;
 }
