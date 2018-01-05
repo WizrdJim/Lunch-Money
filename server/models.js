@@ -37,6 +37,7 @@ const UserSchema = new Schema({
     type: Number
   }
 })
+
 const DonationSchema = new Schema({
   username: {
     type: String
