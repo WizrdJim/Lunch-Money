@@ -8,7 +8,6 @@ class Donors extends Component {
 
   render(){
     return(
-
       
     );
   }

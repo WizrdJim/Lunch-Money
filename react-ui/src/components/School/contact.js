@@ -7,46 +7,34 @@ import {
   Route 
 } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-
+import SchoolList from '../Dummy_Data/dummy_schools.js'
 
   class Contact extends Component {
   constructor(props){
   super(props);
   
   this.state = {
-    number: [],
-    email: [],
-    websiteUrl: []
+    Phone: null,
+    Email: []
   }
 }
 
-componentDidMount();
 
-getinfo = (search_term) => {
-  //some code
-  search_term.map( (num, id) => {
-    return(
-      <ul>
-      {/*<li>
-        {school.id.number
-        school.id.email,
-        school.id.websiteUrl} 
-        </li>
-        </ul>*/}
-    );
-  });
-}
-{/*getEmail = (search_term) => {
-  //some code
-  search_term.map( (num, id) => {
+
+info = () => {
+  SchoolList.map((info, id) => {
     return(
       <ul>
       <li>
-        {school.id.number} 
+        {this.props.Phone}
+        {this.props.Email}
         </li>
         </ul>
     );
-  });*/}
+
+  }
+  )
+}
 
 
     render() {

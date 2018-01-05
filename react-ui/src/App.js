@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 // import img from './LunchMoney_logo.png';
 import './App.css';
+
+// import {Button} from 'react-bootstrap';
+// import Login from './containers/Login';
+
 import Login from './containers/Login';
 import DonorPage from './components/Donors';
 import PaymentPage from './components/Payments';
@@ -9,11 +13,11 @@ import SchoolPage from './components/School';
 import { Route } from 'react-router-dom';
 
 
-import ProgressBarInstance from './components/School/progress_bar';
-// import Thumbnail from './components/School/thumbnail';
-import SchoolList from './Dummy Data/dummy_school';
 
-import HomePage from './components/Home/index.js'
+// import ProgressBarInstance from './components/School/progress_bar';
+// // import Thumbnail from './components/School/thumbnail';
+// import SchoolList from './Dummy Data/dummy_school';
+  import HomePage from './components/Home/index.js'
 
 class App extends Component {
   constructor(props) {

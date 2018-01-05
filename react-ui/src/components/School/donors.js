@@ -10,6 +10,29 @@ import { Button } from 'react-bootstrap';
 
 
   class Donors extends Component {
+<<<<<<< HEAD
+  constructor(){
+  super();
+
+}
+
+
+componentDidMount();
+
+getImage = (search_term) => {
+  //some code
+  search_term.map( (img, id) => {
+    return(
+      <ul>
+      <li>
+        {user.id.img.url} 
+        </li>
+        </ul>
+    );
+  });
+}
+
+=======
   constructor(props){
   super(props);
   
@@ -20,6 +43,7 @@ import { Button } from 'react-bootstrap';
   }
 }
 
+>>>>>>> 584cc14ccbb507896f40cf739ea5dd05a24ca85c
 handle
     render() {
       return(
