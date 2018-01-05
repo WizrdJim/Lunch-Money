@@ -7,6 +7,7 @@ import {Thumbnail} from 'react-bootstrap'
 import {Col} from 'react-bootstrap';
 import {FormGroup} from 'react-bootstrap';
 import {FormControl} from 'react-bootstrap';
+import Nav from './Nav';
 
 class HomePage extends Component {
     constructor() {
@@ -16,10 +17,10 @@ class HomePage extends Component {
     render() {
         return (
             <div> 
+                <div>
+                    <Nav />
+                </div>
                 <Jumbotron className='jumbotron'>
-                    <div>
-                        {/* <Navbar /> */}
-                    </div>
                     <div className='logo'>
                         <Image src={require('./LunchMoney_logo.png')} responsive />
                     </div>
