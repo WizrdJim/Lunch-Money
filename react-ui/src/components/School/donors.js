@@ -10,30 +10,14 @@ import { Button } from 'react-bootstrap';
 
 
   class Donors extends Component {
-  constructor(){
-  super();
+  constructor(props){
+  super(props);
   
   this.state = {
-    user: [],
-    name: "",
+    users: props.donors,
     donations: "",
     message: ""
   }
-}
-
-componentDidMount();
-
-getImage = (search_term) => {
-  //some code
-  search_term.map( (img, id) => {
-    return(
-      <ul>
-      <li>
-        {user.id.img.url} 
-        </li>
-        </ul>
-    );
-  });
 }
 
 handle
@@ -41,7 +25,7 @@ handle
       return(
         <div>
           <div className="donors--container">
-          <img src={user.thumbnailUrl}/>
+          <img src={users.thumbnailUrl}/>
           <p>{history.name}</p>
           <p>{history.donation}</p>
           <p>{history.message}</p>
