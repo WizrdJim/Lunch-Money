@@ -3,3 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.jumbotron {
+  padding: 50px;
+}
+.logo {
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 50%;
+  padding-bottom: 50px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbox {
+  padding-left: 20%;
+  padding-right: 20%;
+}
