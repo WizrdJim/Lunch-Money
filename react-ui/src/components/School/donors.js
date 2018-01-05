@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap';
 
 
   class Donors extends Component {
+<<<<<<< HEAD
   constructor(){
   super();
 
@@ -31,12 +32,24 @@ getImage = (search_term) => {
   });
 }
 
+=======
+  constructor(props){
+  super(props);
+  
+  this.state = {
+    users: props.donors,
+    donations: "",
+    message: ""
+  }
+}
+
+>>>>>>> 584cc14ccbb507896f40cf739ea5dd05a24ca85c
 handle
     render() {
       return(
         <div>
           <div className="donors--container">
-          <img src={user.thumbnailUrl}/>
+          <img src={users.thumbnailUrl}/>
           <p>{history.name}</p>
           <p>{history.donation}</p>
           <p>{history.message}</p>
