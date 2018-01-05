@@ -37,7 +37,12 @@ class HomePage extends Component {
         this.setState({
           modal: !this.state.modal
         });
-      }
+    }
+    toggleSchool =()=> {
+      this.setState({
+        school: !this.state.school
+      });
+    }
 
     render() {
         return (
@@ -47,13 +52,12 @@ class HomePage extends Component {
                 </div>
                 <div>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                    <ModalHeader toggle={this.toggle}>{this.state.school? "School" : "Donor"}</ModalHeader>
                     <ModalBody>
                         <Login login={this.state.login}/>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="primary" onClick={this.toggleSchool}>{this.state.school? "Donor": "School"}</Button>{' '}
                     </ModalFooter>
                     </Modal>
                 </div>
