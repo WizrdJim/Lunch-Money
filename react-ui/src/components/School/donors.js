@@ -7,56 +7,47 @@ import {
   Route 
 } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import DonorList from '../../Dummy Data/dummy_donor';
 
 
   class Donors extends Component {
-<<<<<<< HEAD
-  constructor(){
-  super();
-
-}
-
-
-componentDidMount();
-
-getImage = (search_term) => {
-  //some code
-  search_term.map( (img, id) => {
-    return(
-      <ul>
-      <li>
-        {user.id.img.url} 
-        </li>
-        </ul>
-    );
-  });
-}
-
-=======
   constructor(props){
   super(props);
   
   this.state = {
-    users: props.donors,
-    donations: "",
-    message: ""
-  }
+    FirstName: "",
+    LastName: "",
+    ImageUrl: "",
+    Amount: 50,
+      Date: ""
+    }
+}
+getData = () => {
+  DonorList.map( (item, index) => {
+    return (
+    <div>
+      <li>
+        {item.FirstName}
+        {item.LastName}
+        {item.ImageUrl}
+        {item.Amount}
+        {item.Date}
+        </li>
+    </div>
+    );
+  })
+
 }
 
->>>>>>> 584cc14ccbb507896f40cf739ea5dd05a24ca85c
-handle
     render() {
       return(
-        <div>
-          <div className="donors--container">
-          <img src={users.thumbnailUrl}/>
-          <p>{history.name}</p>
-          <p>{history.donation}</p>
-          <p>{history.message}</p>
+        <div key={index} className="donors--container">
+          <div className="donors--detail">
+            {getData()}
           </div>
           </div>
       );
     };
 }
 
-export default Thumbnail;
+export default Donors;
