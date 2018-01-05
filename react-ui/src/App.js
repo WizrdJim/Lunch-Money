@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Button} from 'react-bootstrap';
 import Login from './containers/Login';
+import ProgressBarInstance from './components/School/progress_bar';
+import Thumbnail from './components/School/thumbnail';
 
 
 class App extends Component {
@@ -25,9 +26,10 @@ class App extends Component {
           <Button onClick={()=> this.setState({login: !this.state.login})}>{this.state.login ? "Don't an account" : 'Login'}</Button>
         </div>
         <div>
-
+          <ProgressBarInstance />
         </div>
         <div>
+          <Thumbnail />
         </div>
       </div>
     )
