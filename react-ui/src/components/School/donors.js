@@ -12,14 +12,9 @@ import { Button } from 'react-bootstrap';
   class Donors extends Component {
   constructor(){
   super();
-  
-  this.state = {
-    user: [],
-    name: "",
-    donations: "",
-    message: ""
-  }
+
 }
+
 
 componentDidMount();
 

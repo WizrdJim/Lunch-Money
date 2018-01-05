@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 // import img from './LunchMoney_logo.png';
 import './App.css';
+
 // import {Button} from 'react-bootstrap';
 // import Login from './containers/Login';
+
+import Login from './containers/Login';
+
 
 // import ProgressBarInstance from './components/School/progress_bar';
 // // import Thumbnail from './components/School/thumbnail';
