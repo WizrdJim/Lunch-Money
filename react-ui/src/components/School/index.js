@@ -9,7 +9,7 @@ class Schools extends Component {
 
   }
   const list = DonorList.map((item, index)=> {
-    return item;
+    return item
   })
   const lunchCost = 3;
   render(){
