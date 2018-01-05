@@ -6,13 +6,14 @@ import {
   Link,
   Route 
 } from 'react-router-dom';
+import ProgressBarInstance from './progress_bar';
 
 
   class Thumbnail extends Component {
-  constructor(){
+  constructor(props){
+    super(props);
 
-
-  const getImage = (search_term) => {
+ /* const getImage = (search_term) => {
     //some code
     search_term.map( (img, id) => {
       return(
@@ -24,7 +25,7 @@ import {
       );
     });
   }
-}
+} */
     render() {
       return(
         <div>
@@ -38,12 +39,12 @@ import {
       );
     };
 
-const mapStateToProps = state => {
+  mapStateToProps = state => {
 
 }
 }
 
-connect(mapStateToProps, somethingelse )(theFileName)
+connect(mapStateToProps, somethingelse ) (theFileName)
   
 
 export default Thumbnail;
