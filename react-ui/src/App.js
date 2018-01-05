@@ -6,17 +6,10 @@ import {Button} from 'react-bootstrap';
 import Login from './containers/Login';
 
 import ProgressBarInstance from './components/School/progress_bar';
-import Thumbnail from './components/School/thumbnail';
+// import Thumbnail from './components/School/thumbnail';
 import SchoolList from './Dummy Data/dummy_school';
-import ProgressBarInstance from './components/School/progressBar';
-import {Jumbotron} from 'react-bootstrap';
-import {Image} from 'react-bootstrap';
-import {Grid} from 'react-bootstrap';
-import {Row} from 'react-bootstrap';
-import {Thumbnail} from 'react-bootstrap'
-import {Col} from 'react-bootstrap';
-import {FormGroup} from 'react-bootstrap';
-import {FormControl} from 'react-bootstrap';
+
+import HomePage from './components/Home/index.js'
 
 class App extends Component {
   constructor(props) {
@@ -30,61 +23,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Jumbotron className='jumbotron'>
-          <div className='logo'>
-            <Image src={require('./LunchMoney_logo.png')} responsive />
-          </div>
-          <form>
-            <FormGroup className='searchbox'>
-              <FormControl type="text" placeholder="Search for School" />
-            </FormGroup>
-          </form>
-          <Grid>
-          <Row className='row'>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")} />
-            </Col>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")}  />
-            </Col>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")}  />
-            </Col>
-          </Row>
-          <Row className='row'>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")} />
-            </Col>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")}  />
-            </Col>
-            <Col xs={6} md={3}>
-              <Thumbnail href="#" alt="171x180" src={require("./placeholder.png")}  />
-            </Col>
-          </Row>
-        </Grid>
-	      </Jumbotron>
-        {/* <div>
-          <Button onClick={()=> this.setState({school: !this.state.school})}> {this.state.school? "School" : "Donor"} </Button>
-          <h1> {this.state.login ? 'Login' : 'SignUp'} </h1>
-          <Login login={this.state.login}/>
-          <Button onClick={()=> this.setState({login: !this.state.login})}>{this.state.login ? "Don't an account" : 'Login'}</Button>
-        </div>
-        <div>
-          {SchoolList.map((item, index)=>{
-            return(
-              <ProgressBarInstance key={index.toString} 
-            donations={item.Donations}
-            donationsNeeded={item.DonationsNeeded}
-          />
-            )  
-        })
-          }
-
-        </div>
-        <div>
-          <ProgressBarInstance />
-        </div> */}
+        <HomePage />
       </div>
     )
   }

@@ -6,6 +6,7 @@ body {
 
 .jumbotron {
   padding: 50px;
+  background-color: white;
 }
 .logo {
   width: 50%;
