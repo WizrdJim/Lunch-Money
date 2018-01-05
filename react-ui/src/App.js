@@ -4,6 +4,7 @@ import {Button} from 'react-bootstrap';
 import Login from './containers/Login';
 import ProgressBarInstance from './components/School/progress_bar';
 import Thumbnail from './components/School/thumbnail';
+import SchoolList from './Dummy Data/dummy_school';
 
 
 class App extends Component {
@@ -26,7 +27,13 @@ class App extends Component {
           <Button onClick={()=> this.setState({login: !this.state.login})}>{this.state.login ? "Don't an account" : 'Login'}</Button>
         </div>
         <div>
-          <ProgressBarInstance />
+          {SchoolList.map((item, index)=>{
+          <ProgressBarInstance key={index.toString} 
+            donations={item.Donations}
+            donationsNeeded={items.DonationsNeeded}
+          />
+          })}
+
         </div>
         <div>
           <Thumbnail />

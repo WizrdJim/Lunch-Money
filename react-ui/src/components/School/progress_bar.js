@@ -3,27 +3,17 @@ import { ProgressBar } from 'react-bootstrap';
 
 
 
-class ProgressBarInstance extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+const ProgressBarInstance = (props) => {
   progressInstance = () => {
-    const progressInstance = <ProgressBar now={60} />;
+    const progressInstance = <ProgressBar now={props.donations/props.donationsNeeded * 100} />;
     return(
       progressInstance
     );
   }
-  render() {
-    return(
-      <div>
-        {this.progressInstance()}
-        </div>
-    );
-
-
-  }
-
-
+  return(
+    <div>
+      {this.progressInstance()}
+      </div>
+  );
 }
 export default ProgressBarInstance;
