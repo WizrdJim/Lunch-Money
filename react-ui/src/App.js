@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Route path="/" component={ HomePage } />
+        <Route exact path="/" component={ HomePage } />
         <Route path="/donor" component={DonorPage} />
         <Route path="/school" component={SchoolPage} />
         <Route path="/payment" component={PaymentPage} />
