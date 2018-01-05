@@ -1,31 +1,50 @@
 import React, { Component } from 'react';
-import {Navbar} from 'react-bootstrap';
-import {NavItem} from 'react-bootstrap';
-import {NavDropdown} from 'react-bootstrap';
-import {MenuItem} from 'react-bootstrap';
-
-class Nav extends Component {
-    constructor() {
-        super();
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    Button } from 'reactstrap';
+  
+class Navigation extends React.Component {
+    constructor(props) {
+      super(props);
+  
+      this.toggle = this.toggle.bind(this);
+      this.state = {
+        isOpen: false
+      };
     }
-
+    toggle() {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    }
     render() {
-        return (
-            <div> 
-                <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse>
-                    <Navbar.Text pullRight href="#">Sign Up</Navbar.Text>
-                    <Navbar.Text pullRight href="#">Login</Navbar.Text>
-                </Navbar.Collapse>
-                </Navbar>
-            </div>
-        );
+      return (
+          <Navbar color="faded" light expand="md">
+            <NavbarBrand href="/">Lunch Money</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <Button onClick={this.props.onSignUpClick}>Sign Up</Button>
+                </NavItem>
+                <NavItem>
+                  <Button onClick={this.props.onLoginClick}>Log in</Button>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+      );
     }
-}
+  }
 
-export default Nav;
+export default Navigation;
