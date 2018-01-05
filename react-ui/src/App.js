@@ -4,6 +4,10 @@ import logo from './logo.svg';
 import './App.css';
 import {Button} from 'react-bootstrap';
 import Login from './containers/Login';
+
+import ProgressBarInstance from './components/School/progress_bar';
+import Thumbnail from './components/School/thumbnail';
+import SchoolList from './Dummy Data/dummy_school';
 import ProgressBarInstance from './components/School/progressBar';
 import {Jumbotron} from 'react-bootstrap';
 import {Image} from 'react-bootstrap';
@@ -67,7 +71,16 @@ class App extends Component {
           <Button onClick={()=> this.setState({login: !this.state.login})}>{this.state.login ? "Don't an account" : 'Login'}</Button>
         </div>
         <div>
-          <ProgressBarInstance />
+          {SchoolList.map((item, index)=>{
+            return(
+              <ProgressBarInstance key={index.toString} 
+            donations={item.Donations}
+            donationsNeeded={item.DonationsNeeded}
+          />
+            )  
+        })
+          }
+
         </div>
         <div>
           <ProgressBarInstance />
