@@ -59,9 +59,6 @@ class App extends Component {
             </Col>
           </Row>
         </Grid>
-		      <p>
-			      <Button bsStyle="primary">Learn more</Button>
-		      </p>
 	      </Jumbotron>
         {/* <div>
           <Button onClick={()=> this.setState({school: !this.state.school})}> {this.state.school? "School" : "Donor"} </Button>
