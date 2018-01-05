@@ -28,11 +28,14 @@ class App extends Component {
         </div>
         <div>
           {SchoolList.map((item, index)=>{
-          <ProgressBarInstance key={index.toString} 
+            return(
+              <ProgressBarInstance key={index.toString} 
             donations={item.Donations}
-            donationsNeeded={items.DonationsNeeded}
+            donationsNeeded={item.DonationsNeeded}
           />
-          })}
+            )  
+        })
+          }
 
         </div>
         <div>

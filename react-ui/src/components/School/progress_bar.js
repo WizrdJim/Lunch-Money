@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
 
 
 
 const ProgressBarInstance = (props) => {
-  progressInstance = () => {
-    const progressInstance = <ProgressBar now={props.donations/props.donationsNeeded * 100} />;
+  const progressInstance = () => {
+    const progress = <ProgressBar now={props.donations/props.donationsNeeded * 100} />;
     return(
-      progressInstance
+      progress
     );
   }
   return(
     <div>
-      {this.progressInstance()}
+      {progressInstance()}
       </div>
   );
 }
