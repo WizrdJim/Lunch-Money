@@ -15,7 +15,8 @@ class Schools extends Component {
   render(){
     return(
       <div>
-        <img src={props.Image}/> 
+        <Bio className="school-bio"/>
+        <img src="http://res.cloudinary.com/dxhe5knal/image/upload/v1515166756/School_4_-_Bailey_drvakf.jpg"/> 
         <div>
           <h2>{props.Name}</h2>
           <h3>Mascot: {props.Mascot}</h3>
